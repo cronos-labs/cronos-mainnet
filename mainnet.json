@@ -1,0 +1,32 @@
+{
+  "cronosmainnet_25-1": {
+    "latest_version": "v0.6.1",
+    "binary": [
+      {
+        "linux": {
+          "link": "https://github.com/crypto-org-chain/cronos/releases/download/v0.6.1/cronos_0.6.1_Linux_x86_64.tar.gz",
+          "checksum": "2ffa01b53803ef0e25c359cf42b13706db82b5f7d404473908d8e732e5aff0b4"
+        },
+        "osx": {
+          "link": "https://github.com/crypto-org-chain/cronos/releases/download/v0.6.1/cronos_0.6.1_Darwin_x86_64.tar.gz",
+          "checksum": "b5cfa82f643c36cea5f8001d338801595234799d33f02ac80075b3cb28e861cc"
+        },
+        "windows": {
+          "link": "https://github.com/crypto-org-chain/cronos/releases/download/v0.6.1/cronos_0.6.1_Windows_x86_64.zip",
+          "checksum": "67acf781242dc1fa3762012365b79401a05ed808423062e78314e4dd1adb714b"
+        },
+        "version": "v0.6.1"
+      }
+    ],
+    "seeds": "0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656,3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656,04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656",
+    "persistent_peers": "0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656,3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656,04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656",
+    "endpoint": {
+      "evm_jsonrpc": "https://evm-cronos.crypto.org",
+      "rpc": "https://rpc-cronos.crypto.org",
+      "restful": "https://rest-cronos.crypto.org",
+      "grpc": "https://grpc-cronos.crypto.org"
+    },
+    "genesis_sha256sum": "58f17545056267f57a2d95f4c9c00ac1d689a580e220c5d4de96570fbbc832e1",
+    "denom": "basecro"
+  }
+}
