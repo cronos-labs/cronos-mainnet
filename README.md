@@ -27,3 +27,10 @@ Seed nodes
 - `04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656` - Crypto.org 
 ```
 
+## Token contract addresses 
+- WCRO: `0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23` (decimal: 18)
+- WETH Token: `0xe44Fd7fCb2b1581822D0c862B68222998a0c299a` (decimal: 18)
+- WBTC Token: `0x062E66477Faf219F25D27dCED647BF57C3107d52` (decimal: 8)
+- USDC Token: `0xc21223249CA28397B4B6541dfFaEcC539BfF0c59` (decimal: 6)
+- USDT Token: `0x66e428c3f67a68878562e79A0234c1F83c208770` (decimal: 6)
+- DAI Token: `0xF2001B145b43032AAF5Ee2884e456CCd805F677D` (decimal: 18)
