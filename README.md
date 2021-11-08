@@ -1,11 +1,11 @@
-# Cronos Chain Mainnet
+# Cronos Chain Mainnet Beta 
 
 This repo collects the genesis, configuration files and script for the Cronos chain
 mainnet.
 
 ## Getting Started
 
-To get started with the mainnet, see the
+To get started with the Mainnet Beta , see the
 [docs](https://cronos.crypto.org/docs/getting-started/cronos-mainnet.html).
 
 ## Mainnet Status
