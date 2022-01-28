@@ -1,4 +1,4 @@
-# Cronos Chain Mainnet Beta 
+# Cronos Chain Mainnet Beta
 
 This repo collects the genesis, configuration files and script for the Cronos chain
 mainnet.
@@ -10,24 +10,22 @@ To get started with the Mainnet Beta , see the
 
 ## Mainnet Status
 
-
-- *NOV 8, 2021 01:00:00 UTC* - [cronosmainnet_25-1](./cronosmainnet_25-1)
-
-
+- _NOV 8, 2021 01:00:00 UTC_ - [cronosmainnet_25-1](./cronosmainnet_25-1)
 
 ## Seed Nodes
 
-A list of seeds from Crypto.org . Please make sure you add them to `seeds` in `config.toml` 
+A list of seeds from Crypto.org . Please make sure you add them to `seeds` in `config.toml`
 
 Seed nodes
 
 ```
 - `0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656` - Crypto.org
 - `3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656` - Crypto.org
-- `04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656` - Crypto.org 
+- `04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656` - Crypto.org
 ```
 
-## Token contract addresses 
+## Token contract addresses
+
 | Token name | Address                                                                                                                                            | Decimal |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | WCRO       | [0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23](https://cronos.crypto.org/explorer/tokens/0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23/token-transfers) | 18      |
@@ -43,3 +41,4 @@ Seed nodes
 | ENJ        | [0x0A92ea8a197919aCb9BC26660Ed0D43D01ed26b7](https://cronos.crypto.org/explorer/address/0x0A92ea8a197919aCb9BC26660Ed0D43D01ed26b7/transactions)   | 18      |
 | ELON       | [0x02DCcaf514C98451320a9365C5b46C61d3246ff3](https://cronos.crypto.org/explorer/address/0x02DCcaf514C98451320a9365C5b46C61d3246ff3/transactions)   | 18      |
 | TUSD       | [0x87EFB3ec1576Dec8ED47e58B832bEdCd86eE186e](https://cronos.crypto.org/explorer/address/0x87EFB3ec1576Dec8ED47e58B832bEdCd86eE186e/transactions)   | 18      |
+| LUNA       | [0x9278C8693e7328bef49804BacbFb63253565dffD](https://cronos.crypto.org/explorer/address/0x9278C8693e7328bef49804BacbFb63253565dffD/transactions)   | 6       |
