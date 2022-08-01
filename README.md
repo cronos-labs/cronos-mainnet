@@ -6,7 +6,7 @@ mainnet.
 ## Getting Started
 
 To get started with the Mainnet Beta , see the
-[docs](https://cronos.crypto.org/docs/getting-started/cronos-mainnet.html).
+[docs](https://docs.cronos.org/getting-started/).
 
 ## Mainnet Status
 
