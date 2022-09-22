@@ -1,11 +1,11 @@
-# Cronos Chain Mainnet Beta
+# Cronos Chain Mainnet
 
 This repo collects the genesis, configuration files and script for the Cronos chain
 mainnet.
 
 ## Getting Started
 
-To get started with the Mainnet Beta , see the
+To get started with the Mainnet, see the
 [docs](https://docs.cronos.org/getting-started/).
 
 ## Mainnet Status
@@ -14,7 +14,7 @@ To get started with the Mainnet Beta , see the
 
 ## Seed Nodes
 
-A list of seeds from Crypto.org . Please make sure you add them to `seeds` in `config.toml`
+A list of seeds from Crypto.org and Blockdaemon. Please make sure you add them to `seeds` in `config.toml`
 
 Seed nodes
 
