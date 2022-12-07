@@ -1,6 +1,6 @@
 {
   "cronosmainnet_25-1": {
-    "latest_version": "v0.7.0",
+    "latest_version": "v0.8.3",
     "binary": [
       {
         "linux": {
@@ -31,6 +31,21 @@
           "checksum": "b5f221267c52d1955c2a4058a3150dead6d42bd07ff6841b33f84570847585f3"
         },
         "version": "v0.7.0"
+      },
+      {
+        "linux": {
+          "link": "https://github.com/crypto-org-chain/cronos/releases/download/v0.8.3/cronos_0.8.3_Linux_x86_64.tar.gz",
+          "checksum": "ecd5aac5a668bed9fdb3dbf97b18cb9646cc7f2b5e19df6f98f753b3008bf3a7"
+        },
+        "osx": {
+          "link": "https://github.com/crypto-org-chain/cronos/releases/download/v0.8.3/cronos_0.8.3_Darwin_x86_64.tar.gz",
+          "checksum": "74f6602692ad0f2cf09cd3e988399f10046eda402eb10188857e789a8ba304f4"
+        },
+        "windows": {
+          "link": "https://github.com/crypto-org-chain/cronos/releases/download/v0.8.3/cronos_0.8.3_Windows_x86_64.zip",
+          "checksum": "d62fd610bb44b433b2d6999f77c688c9c14a9331f02237177b5fd9205925f24b"
+        },
+        "version": "v0.8.3"
       }
     ],
     "seeds": "0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656,3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656,04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656,337377dcda43d79c537d2c4d93ad3b698ce9452e@bd-cronos-mainnet-seed-node-01.bdnodes.net:26656",
