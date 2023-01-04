@@ -8,6 +8,13 @@ mainnet.
 To get started with the Mainnet, see the
 [docs](https://docs.cronos.org/getting-started/).
 
+- To run the latest binary version:
+`LATEST_VERSION=$(curl -s  https://rpc.cronos.org/abci_info\? | jq -r .result.response.version | sed 's/v//')`
+
+- Next, run the Dockerfile with a mounted data directory with the latest binary for example with `Linux_x86_64`:
+`docker build --build-arg LATEST_VERSION=$LATEST_VERSION --build-arg OS_VERSION=Linux_x86_64 -t cryptocom/cronos .   `
+`docker run -it -p 26657:26657 -p 26656:26656 -v ~/.cronos:/opt/app/cronos/.cronos cryptocom/cronos cronosd start --home /opt/app/cronos/.cronos`
+
 ## Mainnet Status
 
 - _NOV 8, 2021 01:00:00 UTC_ - [cronosmainnet_25-1](./cronosmainnet_25-1)
