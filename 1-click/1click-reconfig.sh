@@ -18,7 +18,7 @@ download_binary()
         echo_s "The checksum does not match the target downloaded file! Something wrong from download source, please try again or create an issue for it."
         exit 1
     fi
-    sudo tar -xzf $CM_DIR/cronosd.tar.gz
+    sudo tar -xzf $CM_DIR/cronosd.tar.gz -C $CM_DIR
 }
 InitChain()
 {
