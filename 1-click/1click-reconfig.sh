@@ -30,7 +30,7 @@ InitChain()
     if [[ -n "$MONIKER" ]] ; then
         sudo $CM_BINARY init $MONIKER --chain-id $NETWORK --home $CM_HOME
         PERSISTENT_PEERS=$(curl -sS $NETWORK_JSON | jq -r ".\"$NETWORK\".seeds")
-        sed -i "s/^\(persistent_peers\s*=\s*\).*\$/\1\"$PERSISTENT_PEERS\"/" $CM_CONFIG
+        sudo sed -i "s/^\(persistent_peers\s*=\s*\).*\$/\1\"$PERSISTENT_PEERS\"/" $CM_CONFIG
     else
         echo_s "moniker is not set. Try again!\n"
     fi
@@ -60,7 +60,7 @@ AllowGossip()
         read -p 'What is the public IP of this server?: ' IP
     fi
     echo_s "✅ Added public IP to external_address in cronosd config.toml for p2p gossip\n"
-    sed -i "s/^\(external_address\s*=\s*\).*\$/\1\"$IP:26656\"/" $CM_CONFIG
+    sudo sed -i "s/^\(external_address\s*=\s*\).*\$/\1\"$IP:26656\"/" $CM_CONFIG
 }
 EnableStateSync()
 {
@@ -75,16 +75,16 @@ EnableStateSync()
     index1=$(($RANDOM % $peer_size))
     index2=$(($RANDOM % $peer_size))
     PERSISTENT_PEERS="${array[$index1]},${array[$index2]}"
-    sed -i "s/^\(seeds\s*=\s*\).*\$/\1\"\"/" $CM_CONFIG
-    sed -i "s/^\(persistent_peers\s*=\s*\).*\$/\1\"$PERSISTENT_PEERS\"/" $CM_CONFIG
-    sed -i "s/^\(trust_height\s*=\s*\).*\$/\1$BLOCK_HEIGHT/" $CM_CONFIG
-    sed -i "s/^\(trust_hash\s*=\s*\).*\$/\1\"$TRUST_HASH\"/" $CM_CONFIG
-    sed -i "s/^\(enable\s*=\s*\).*\$/\1true/" $CM_CONFIG
-    sed -i "s|^\(rpc_servers\s*=\s*\).*\$|\1\"$RPC_SERVERS,$RPC_SERVERS\"|" $CM_CONFIG
+    sudo sed -i "s/^\(seeds\s*=\s*\).*\$/\1\"\"/" $CM_CONFIG
+    sudo sed -i "s/^\(persistent_peers\s*=\s*\).*\$/\1\"$PERSISTENT_PEERS\"/" $CM_CONFIG
+    sudo sed -i "s/^\(trust_height\s*=\s*\).*\$/\1$BLOCK_HEIGHT/" $CM_CONFIG
+    sudo sed -i "s/^\(trust_hash\s*=\s*\).*\$/\1\"$TRUST_HASH\"/" $CM_CONFIG
+    sudo sed -i "s/^\(enable\s*=\s*\).*\$/\1true/" $CM_CONFIG
+    sudo sed -i "s|^\(rpc_servers\s*=\s*\).*\$|\1\"$RPC_SERVERS,$RPC_SERVERS\"|" $CM_CONFIG
 }
 DisableStateSync()
 {
-    sed -i "s/^\(enable\s*=\s*\).*\$/\1false/" $CM_CONFIG
+    sudo sed -i "s/^\(enable\s*=\s*\).*\$/\1false/" $CM_CONFIG
 }
 clearDataAndBinary()
 {
@@ -109,7 +109,7 @@ shareIP()
         [Yy]* ) AllowGossip;;
         * )
             echo_s "WIll keep 'external_address value' empty\n";
-            sed -i "s/^\(external_address\s*=\s*\).*\$/\1\"\"/" $CM_CONFIG;;
+            sudo sed -i "s/^\(external_address\s*=\s*\).*\$/\1\"\"/" $CM_CONFIG;;
     esac
 }
 shopt -s extglob
