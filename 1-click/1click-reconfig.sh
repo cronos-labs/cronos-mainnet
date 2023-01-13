@@ -28,7 +28,7 @@ InitChain()
     read -p 'moniker: ' MONIKER
 
     if [[ -n "$MONIKER" ]] ; then
-        $CM_BINARY init $MONIKER --chain-id $NETWORK --home $CM_HOME
+        sudo $CM_BINARY init $MONIKER --chain-id $NETWORK --home $CM_HOME
         PERSISTENT_PEERS=$(curl -sS $NETWORK_JSON | jq -r ".\"$NETWORK\".seeds")
         sed -i "s/^\(persistent_peers\s*=\s*\).*\$/\1\"$PERSISTENT_PEERS\"/" $CM_CONFIG
     else
