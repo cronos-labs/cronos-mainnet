@@ -11,7 +11,7 @@ shopt -s globstar
 download_binary()
 {
     echo_s "💾 Downloading $CM_DESIRED_VERSION binary"
-    curl -LJ $(curl -sS $NETWORK_JSON | jq -r ".\"$NETWORK\".binary | .[] | select(.version==\"$CM_DESIRED_VERSION\").linux.link") -o $CM_DIR/cronosd.tar.gz
+    sudo curl -LJ $(curl -sS $NETWORK_JSON | jq -r ".\"$NETWORK\".binary | .[] | select(.version==\"$CM_DESIRED_VERSION\").linux.link") -o $CM_DIR/cronosd.tar.gz
     CHECKSUM=$(curl -sS $NETWORK_JSON | jq -r ".\"$NETWORK\".binary | .[] | select(.version==\"$CM_DESIRED_VERSION\").linux.checksum")
     echo "downloaded $CHECKSUM"
     if (! echo "$CHECKSUM $CM_DIR/cronosd.tar.gz" | sha256sum -c --status --quiet - > /dev/null 2>&1) ; then
