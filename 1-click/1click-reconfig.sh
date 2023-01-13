@@ -5,7 +5,7 @@ set -e
 download_genesis()
 {
     echo_s "💾 Downloading $NETWORK genesis"
-    sudo curl -sS $NETWORK_URL/$NETWORK/genesis.json -o $CM_GENESIS
+    sudo curl -LJ $NETWORK_URL/$NETWORK/genesis.json -o $CM_GENESIS
 }
 shopt -s globstar
 download_binary()
