@@ -1,0 +1,34 @@
+#systemctl cat cronosd
+[Unit]
+Description=Cronosd
+ConditionPathExists=/chain/bin/cronosd
+After=network.target
+
+[Service]
+Type=simple
+User=crypto
+Group=crypto
+LimitNOFILE=40960
+
+Restart=on-failure
+RestartSec=10
+
+WorkingDirectory=/chain/bin
+ExecStart=/chain/bin/cronosd start --home /chain/.cronos
+
+# make sure log directory exists and owned by syslog
+PermissionsStartOnly=true
+#ExecStartPre=+/bin/systemctl restart tmkms
+#ExecStartPre=+/bin/rm -rf /chain/sockets/validator.socket
+ExecStartPre=/bin/mkdir -p /chain/log/cronosd
+ExecStartPre=/bin/chown syslog:adm /chain/log/cronosd
+ExecStartPre=/bin/chmod 755 /chain/log/cronosd
+
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=cronosd
+
+TimeoutStartSec=3min
+
+[Install]
+WantedBy=multi-user.target
