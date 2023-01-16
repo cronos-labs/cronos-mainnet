@@ -9,7 +9,7 @@ fi
 
 read -p "Please select either mainnet(M) or testnet(T) to join (M/T): " mt
 case $mt in
-    [Mm]* ) REMOTE_SCRIPT="https://raw.githubusercontent.com/crypto-org-chain/cronos-mainnet/main/1-click/1click-reconfig.sh";;
+    [Mm]* ) REMOTE_SCRIPT="https://raw.githubusercontent.com/crypto-org-chain/cronos-mainnet/master/1-click/1click-reconfig.sh";;
     [Tt]* ) REMOTE_SCRIPT="https://raw.githubusercontent.com/crypto-org-chain/cronos-testnets/main/1-click/1click-reconfig.sh";;
     * ) echo "No match"; exit 1;;
 esac
