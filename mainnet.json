@@ -1,7 +1,22 @@
 {
   "cronosmainnet_25-1": {
-    "latest_version": "v0.8.3",
+    "latest_version": "v1.0.2",
     "binary": [
+      {
+        "linux": {
+          "link": "https://github.com/crypto-org-chain/cronos/releases/download/v1.0.2/cronos_1.0.2_Linux_x86_64.tar.gz",
+          "checksum": "ecd5aac5a668bed9fdb3dbf97b18cb9646cc7f2b5e19df6f98f7fac713e12ac0c5ec15c491034521ab93ca39c9c0ea88a0a3e204fd657c70bd1f53b3008bf3a7"
+        },
+        "osx": {
+          "link": "https://github.com/crypto-org-chain/cronos/releases/download/v1.0.2/cronos_1.0.2_Darwin_x86_64.tar.gz",
+          "checksum": "afe7c35858831b81fb4eddfc2bae4a05dd09c82d4954f20a7f445fa6ca3039fe"
+        },
+        "windows": {
+          "link": "https://github.com/crypto-org-chain/cronos/releases/download/v1.0.2/cronos_1.0.2_Windows_x86_64.tar.gz",
+          "checksum": "e1989d0037f03e84b314a60354fcb21e750c2e74380219ebae22da38609ea859"
+        },
+        "version": "v1.0.2"
+      },
       {
         "linux": {
           "link": "https://github.com/crypto-org-chain/cronos/releases/download/v0.8.3/cronos_0.8.3_Linux_x86_64.tar.gz",
