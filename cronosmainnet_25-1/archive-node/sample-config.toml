@@ -1,4 +1,4 @@
-# This is a sample TOML config file based on cronosd v0.8.3
+# This is a sample TOML config file based on cronosd v1.0.2
 # For more information, see https://github.com/toml-lang/toml
 
 # NOTE: Any path below can be absolute (e.g. "/var/myawesomeapp/data") or
@@ -93,7 +93,7 @@ laddr = "tcp://0.0.0.0:26657"
 # A list of origins a cross-domain request can be executed from
 # Default value '[]' disables cors support
 # Use '["*"]' to allow any origin
-cors_allowed_origins = ['https://cronos.org', 'https://cronos.3ona.co']
+cors_allowed_origins = []
 
 # A list of methods the client is allowed to use with cross-domain requests
 cors_allowed_methods = ["HEAD", "GET", "POST", ]
@@ -275,7 +275,7 @@ dial_timeout = "3s"
 # Mempool version to use:
 #   1) "v0" - (default) FIFO mempool.
 #   2) "v1" - prioritized mempool.
-version = "v0"
+version = "v1"
 recheck = true
 broadcast = true
 wal_dir = ""
@@ -408,6 +408,17 @@ create_empty_blocks_interval = "5s"
 # Reactor sleep duration parameters
 peer_gossip_sleep_duration = "100ms"
 peer_query_maj23_sleep_duration = "2s"
+
+#######################################################
+###         Storage Configuration Options           ###
+#######################################################
+[storage]
+
+# Set to true to discard ABCI responses from the state store, which can save a
+# considerable amount of disk space. Set to false to ensure ABCI responses are
+# persisted. ABCI responses are required for /block_results RPC queries, and to
+# reindex events in the command-line tool.
+discard_abci_responses = false
 
 #######################################################
 ###   Transaction Indexer Configuration Options     ###
