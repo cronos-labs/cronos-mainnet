@@ -8,12 +8,23 @@ mainnet.
 To get started with the Mainnet, see the
 [docs](https://docs.cronos.org/getting-started/).
 
+
+### Docker
 - To run the latest binary version:
 `LATEST_VERSION=$(curl -s  https://rpc.cronos.org/abci_info\? | jq -r .result.response.version | sed 's/v//')`
 
 - Next, run the Dockerfile with a mounted data directory with the latest binary for example with `Linux_x86_64`:
 `docker build --build-arg LATEST_VERSION=$LATEST_VERSION --build-arg OS_VERSION=Linux_x86_64 -t cryptocom/cronos .   `
 `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.cronos:/opt/app/cronos/.cronos cryptocom/cronos cronosd start --home /opt/app/cronos/.cronos`
+
+### 1-click launch script
+To run the `reconfig.sh` make sure to get the Cronos AMI on the marketplace.
+
+- Make sure to have the `cronosd.service` setup under `/lib/systemd/system/cronosd.service` 
+- run `sudo -u crypto /chain/reconfig.sh` from root directory `/`
+- Follow the instructions in the script
+- To check the status of the service `systemctl status cronosd.service` and monitor logs `journalctl -u cronosd.service -f`
+- To stop the service `systemctl stop cronosd.service`
 
 ## Mainnet Status
 
